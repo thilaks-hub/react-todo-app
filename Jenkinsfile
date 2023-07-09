@@ -6,13 +6,14 @@ pipeline {
             nodejs('v16.20')
     }    
   
-        stage('Git  checkout') {
+       stages {
+           stage('Git  checkout') {
             steps {
                 git branch: 'main',url: 'https://github.com/thilaks-hub/react-todo-app.git'
          
             }
         }
-    stages {
+    
         stage('Install Packages') {
             steps {
                 sh "npm install"
