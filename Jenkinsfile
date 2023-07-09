@@ -1,4 +1,4 @@
-pipeline {
+.pipeline {
     agent any
 
     tools {
@@ -37,7 +37,7 @@ pipeline {
         stage('Archive Artifacts') {
             steps {
                      sh 'zip -r Thilaks-React-${BUILD_NUMBER}.zip build/'
-                     archiveArtifacts artifacts: 'Thilaks-React-${BUILD_NUMBER}.zip'
+                     archiveArtifacts artifacts: 'Thilaks-React-${env.BUILD_NUMBER}.zip'
             }
         }
 
