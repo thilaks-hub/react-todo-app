@@ -5,9 +5,7 @@ pipeline {
 
             nodejs('v16.20')
     }    
-     environment { 
-        CC = 'gcc'
-    }
+  
 
     stages {
         stage('Install Packages') {
