@@ -38,7 +38,7 @@ pipeline {
 
         stage('Archive Artifacts') {
             steps {
-                     sh 'zip -r Thilaks-React-${env.BUILD_NUMBER}.zip build/'
+                     sh 'zip -r Thilaks-React-${BUILD_NUMBER}.zip build/'
                      archiveArtifacts artifacts: 'Thilaks-React-${env.BUILD_NUMBER}.zip'
             }
         }
